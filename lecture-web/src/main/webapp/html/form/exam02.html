@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>출발! 선택의 기로!</title>
+</head>
+<body>
+<form>
+	<progress max="100" value="40"> </progress><br>
+	<meter max = "100" value="20"> </meter> <br>
+
+	색상 선택해봐! <input type="color"><br>
+	시간 선택해봐! <input type="time"><br>
+
+	월 선택해봐! <input type="month"><br>
+	주 선택해봐! <input type="week"><br>
+	날짜 선택해봐! <input type="date"><br>
+	날짜 선택해봐! <input type="date" min="2021-11-01" max="2022-11-01"><br>
+
+	범위를 선택해봐 <input type="range" min="0" max="10" step="10"><br>
+	수량을 지정해봐! <input type="number" min="5" step="5"><br>
+	검색어를 입력해봐! <input type="search"><br>
+	전화번호 입력해봐! <input type="tel" 
+	placeholder="xxx-xxxx-xxxx 형식으로 입력하세요" 
+	pattern="(010|011|016|017|018|019)-\d{3,4}-\d{4}"
+	size="30"><br>
+	
+	이메일을 입력해봐! <input type="email" required> <br>
+	SNS 주소 입력해봐! <input type="url"><br>
+	
+<input type="submit" value="전송">
+</form>
+
+</body>
+</html>

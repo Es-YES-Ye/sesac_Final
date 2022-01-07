@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 요소 뽑아내는... </title>
+<script>
+	let nums = [10, 34, 65, 23, 43]
+	
+	nums.forEach(function(element) {
+		document.write(element + '&nbsp;&nbsp;&nbsp;')
+	})
+	document.write('<br>')
+	/*
+	let nums2 = []
+	for(let i in nums){//인덱스를 알아야 하니까...
+		nums2[i] = nums[i] + 100
+	}*/
+	
+	let nums2 = nums.map(function(element, index){
+		return element + 100
+	})
+
+	document.write('nums : ' + nums + '<br>')
+	document.write('nums2 : ' + nums2 + '<br>')
+	
+	nums.sort(function(left, right){
+		return left-right
+	})
+	document.write('nums : ' + nums + '<br>')
+	
+	nums.sort(function(left, right){
+		return right-left
+	})
+	document.write('nums : ' + nums + '<br>')
+
+	</script>
+</head>
+<body>
+</body>
+</html>

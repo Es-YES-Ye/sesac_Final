@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- 
+HTML 5버전 전에서 음성파일 재생 : embed 태그 사용
+HTML 5버전 음성파일 재생 : audio 태그 사용
+
+HTML 5버전 전에서 영상파일 재생 : embed 태그 사용
+HTML  5버전 영상파일 재생 : video 태그 사용
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>노래와 동영상 첨부</title>
+</head>
+<body> 
+HTML 5 이전 버전에서의 음성파일<br>
+<embed src="playlist/Kalimba.mp3">
+HTML 버전5 음성파일<br>
+<audio src="playlist/Kalimba.mp3" 
+controls="controls" autoplay loop>
+</audio> <br>
+HTML 5 이전 버전에서의 영상파일<br>
+<embed src="playlist/movie.mp4">
+<br>
+
+HTML 버전5 영상파일<br>
+<video src="playlist/movie.mp4" controls>
+</video>
+<br>
+
+<h2>Youtube에서 영상 끌어오고 싶을 때</h2><br>
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/tE4PviEbSgA" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+<iframe width="1000" height="1500" src="playlist/JDBC.pdf">
+</iframe>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>child 문제점</title>
+<style>
+	h1:first-child {
+		color : red;
+	}
+	
+	h1:first-of-type {
+		color : pink
+	}
+	
+	h2:last-of-type {
+		color : green
+	}
+	
+	p::first-line{
+		text-decoration: underline;
+	}
+	
+	p::first-letter {
+		font-size:2em;
+	}
+	
+	p::selection {
+		background-color: pink;
+	}
+</style>
+</head>
+<body>
+	<p>
+		ABCDEFGHIJKLM<br>
+		NOPQRSTUVWXYZ
+	</p>
+	
+	<p>
+		abcdefghijklm<br>
+		nopqrstuvwxyy
+	</p>
+	
+	<h1>Header-1</h1>
+	<h2>Header-2</h2>
+	<h3>Header-3</h3>
+	<h4>Header-5</h4>
+	<h1>Header-1</h1>
+	<h2>Header-2</h2>
+	<h6>Header-6</h6>
+	<div>
+		<h2>Sub-2</h2>
+		<h1>Sub-1</h1>
+	</div>
+</body>
+</html>

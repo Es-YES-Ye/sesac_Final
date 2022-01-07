@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>argument</title>
+<script>
+	function func(a, b) {
+		console.log(arguments.length, arguments[0], arguments[1])
+		console.log(a, b)
+	}
+	
+	func() // 매개변수 없는 거 
+	func('hello') // 어떤 때는 한 개만
+	func(10, 20)  //어떤 때는 두 개만
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
