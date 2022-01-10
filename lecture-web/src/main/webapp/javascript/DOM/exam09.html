@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>취미가 뭔데요</title>
+<script>
+	function showResult(){
+	 	let hobby = document.inputForm.hobby
+
+	 	let msg = ''
+	 	
+	 	for(let i = 0; i<hobby.length; i++){
+	 		if(hobby[i].checked){
+	 			msg += hobby[i].value + '\n'
+	 		}
+	 	}
+	 	alert(msg)
+	}
+	 	
+	 	function selectAll(){
+	 		let hobby = document.inputForm.hobby
+	 		for(let i = 0; i<hobby.length; i++){
+	 			hobby[i].checked = true
+	 		}
+	 	}
+	 	
+	 	function deSelectAll(){
+	 		let hobby = document.inputForm.hobby
+	 		for(let i = 0; i<hobby.length; i++){
+	 			hobby[i].checked = false
+	 		}
+	 	}
+	 	
+	 	function toggle(check){ //체크여부값을 넣어서 전체선택취소 한번에
+	 		let hobby = document.inputForm.hobby
+	 		for(let i = 0; i<hobby.length; i++){
+	 			hobby[i].checked = check
+	 		}
+	 	}
+	 	
+	 	function toggle(){
+	 		let hobby = document.inputForm.hobby
+	 		
+	 		let check = false
+	 		for(let i = 0; i<hobby.length; i++){
+	 			if(!hobby[i].checked){//하나라도 false 가 있다면
+	 				check = true //check를 true로 만들겠다.
+	 				break
+	 			}		
+	 		}
+	 		
+	 		for(let i = 0; i < hobby.length; i++){
+	 			hobby[i].checked = check
+	 		}
+	 	}
+	 
+</script>
+</head>
+<body>
+	<form name = "inputForm">
+		당신의 취미는?<br><br>
+		<input type="checkbox" name="hobby" value="음악 좋아?">음악 듣기<br>
+		<input type="checkbox" name="hobby" value="영화 좋아?">영화 보기<br>
+		<input type="checkbox" name="hobby" value="게임 좋아?">게임<br>
+		<input type="checkbox" name="hobby" value="맛집 좋아?">맛집 탐방<br>
+	
+		<input type="button" value="결과보기" onclick="showResult()">
+	<!-- <input type="button" value="전체선택" onclick="selectAll()"> -->	
+	<!-- <input type="button" value="전체취소" onclick="deSelectAll()"> -->
+	<!-- 	<input type="button" value="전체선택" onclick="toggle(true)">  -->
+		<input type="button" value="전체선택'/취소" onclick="toggle()">
+
+	</form>
+
+</body>
+</html>

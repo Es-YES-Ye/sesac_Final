@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>버블버블</title>
+<script>
+	window.onload = function() {
+		let div = document.querySelector('div')
+		let h1 = document.querySelector('h1')
+		let span = document.querySelector('span')
+	
+	
+	span.onclick = function(){
+		alert('span 클릭하신듯;')
+	}
+	
+	h1.onclick = function(e){
+		alert('h1 클릭하신듯;')
+		e.cancelBubble = true
+	}
+
+	div.onclick = function(){
+		alert('div 클릭하신듯;')
+	}
+	}
+	
+</script>
+</head>
+<body>
+	<div>
+		<h1>
+			<span>
+				Hello
+			</span>
+		</h1>
+	</div>
+</body>
+</html>
